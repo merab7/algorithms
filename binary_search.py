@@ -1,3 +1,6 @@
+# in binary search targeted list should be sorted
+
+
 import time
 
 
