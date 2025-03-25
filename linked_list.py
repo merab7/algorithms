@@ -66,22 +66,17 @@ class LinkedList:
         return f"value : {key} is not found"
 
     def search_by_index(self, index):
-
-        current = self.head
         if index == 0:
-            return f"value at index {index} is : {current}"
+            return self.head
+        else:
+            current = self.head
+            position = 0
 
-        if index > 0 and index < self.size():
-            position = index
-
-            while position > 0:
+            while position < index:
                 current = current.next_node
-                position -= 1
+                position += 1
 
-            if current is not None:
-                return f"value at index {index} is : {current}"
-
-        return "index is out of range"
+            return current
 
     def insert(self, data, index):
         """
